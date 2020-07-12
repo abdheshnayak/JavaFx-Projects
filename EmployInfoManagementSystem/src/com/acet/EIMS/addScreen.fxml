@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.acet.EIMS.AddScreenController">
+   <top>
+      <Label text=" Add Employee" textFill="#226fc7" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="189.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="467.0" minWidth="10.0" prefWidth="411.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Enployee Name" />
+            <Label text="Address" GridPane.rowIndex="1" />
+            <Label text="CTZ No." GridPane.rowIndex="2" />
+            <Label text="Position" GridPane.rowIndex="3" />
+            <Label text="Emp ID" GridPane.rowIndex="4" />
+            <Label text="DOB" GridPane.rowIndex="5" />
+            <TextField fx:id="nameField" promptText="Name" GridPane.columnIndex="1" />
+            <TextField fx:id="addressField" promptText="Address" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="CTZFeld" promptText="CTZ No." GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="positionField" promptText="Position" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="empidField" promptText="6 digits" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="dobField" promptText="YYYY-MM-DD" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Gmail" GridPane.rowIndex="6" />
+            <Label text="Mobile Number" GridPane.rowIndex="7" />
+            <Label text="Gender" GridPane.rowIndex="8" />
+            <TextField fx:id="gmailField" promptText="eg. abc@gmail.com" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="conNumber" promptText="XXXXXXXXXX (10 DIGIT)" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <children>
+                  <CheckBox fx:id="maleCheckBox" mnemonicParsing="false" onAction="#checkBoxHandle" selected="true" text="Male" />
+                  <CheckBox fx:id="femaleCheckBox" mnemonicParsing="false" onAction="#checkBoxHandle" text="Female" />
+               </children>
+               <padding>
+                  <Insets left="10.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addBtn" mnemonicParsing="false" onMouseClicked="#handleMouse" text="ADD" />
+            <Button fx:id="closeBtn" mnemonicParsing="false" onMouseClicked="#handleMouse" text="Close" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>
